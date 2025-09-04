@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinity India</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header img {
+      max-width: 160px;
+    }
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 28px;
+      color: #2b572b;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #2b572b;
+      margin-bottom: 20px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #444;
+    }
+    .price {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #2b572b;
+      font-weight: bold;
+    }
+    .wholesale {
+      margin-top: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #d35400;
+    }
+    .links a {
+      display: block;
+      margin: 5px 0;
+      padding: 8px 12px;
+      text-decoration: none;
+      color: #fff;
+      background: #2b572b;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .links a:hover {
+      background: #1e3d1e;
+    }
+    .contact-section {
+      background: #ffffff;
+      padding: 25px;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 700px;
+    }
+    .contact-section h2 {
+      margin-bottom: 15px;
+      color: #2b572b;
+    }
+    .contact-section p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    .contact-section a {
+      color: #2b572b;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+    .map {
+      margin-top: 20px;
+    }
+    iframe {
+      border: 0;
+      border-radius: 10px;
+      width: 100%;
+      height: 300px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background: #2b572b;
+      color: #fff;
+      line-height: 1.6;
+    }
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    /* WhatsApp Floating Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .whatsapp-btn img {
+      width: 35px;
+      height: 35px;
+    }
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+      background: #1ebe57;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Infinity India Logo">
+    <h1>Infinity India</h1>
+    <p>Healthy • Organic • Vegan Food</p>
+  </header>
+
+  <main>
+    <h2>Our Products</h2>
+    <div class="product-grid">
+
+      <!-- Cashew Card -->
+      <div class="card">
+        <img src="{{ url_for('static', filename='cashew.jpg') }}" alt="Cashew">
+        <h3>Cashew (Kaju)</h3>
+        
+        <div class="price">Amazon: ₹780 / kg</div>
+        <div class="price">Flipkart: ₹750 / kg</div>
+        <div class="price">Meesho: ₹740 / kg</div>
+        <div class="wholesale">Wholesale: ₹700 / kg (min 20kg)</div>
+
+        <div class="links">
+          <a href="https://www.amazon.in" target="_blank">Buy on Amazon</a>
+          <a href="https://www.flipkart.com" target="_blank">Buy on Flipkart</a>
+          <a href="https://www.meesho.com" target="_blank">Buy on Meesho</a>
+        </div>
+      </div>
+
+      <!-- Makhana Card -->
+      <div class="card">
+        <img src="{{ url_for('static', filename='makhana.jpg') }}" alt="Makhana">
+        <h3>Makhana</h3>
+        
+        <div class="price">Amazon: ₹1800 / kg</div>
+        <div class="price">Flipkart: ₹1700 / kg</div>
+        <div class="price">Meesho: ₹1500 / kg</div>
+        <div class="wholesale">Wholesale: ₹1150 / kg (min 20kg)</div>
+
+        <div class="links">
+          <a href="https://www.amazon.in" target="_blank">Buy on Amazon</a>
+          <a href="https://www.flipkart.com" target="_blank">Buy on Flipkart</a>
+          <a href="https://www.meesho.com" target="_blank">Buy on Meesho</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <p>📧 Email: <a href="mailto:deyarijit063@gmail.com">deyarijit063@gmail.com</a></p>
+      <p>📞 Phone: <a href="tel:+917278758302">+91 7278758302</a></p>
+      <p>📍 Location: Ghola, Sodepur, West Bengal, India</p>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.378536072473!2d88.401153!3d22.690346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89de672ff2ff7%3A0xf00c0fcbdf3bfbf!2sGhola%2C%20Sodepur%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1693750672824" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Infinity India | Healthy Organic & Vegan Food</p>
+    <p>
+      📧 <a href="mailto:deyarijit063@gmail.com">deyarijit063@gmail.com</a> | 
+      📞 <a href="tel:+917278758302">+91 7278758302</a> | 
+      📍 Ghola, Sodepur, West Bengal, India
+    </p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-btn" href="https://wa.me/917278758302?text=Hello%20Infinity%20India%2C%20I%20want%20to%20know%20more%20about%20your%20products." target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+</body>
+</html>
